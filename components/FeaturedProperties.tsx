@@ -4,7 +4,7 @@ import SectionTitle from '@/components/SectionTitle'
 interface PropertyCardProps {
   title: string
   location: string
-  images: string
+  image: string
   featured: boolean
 }
 
@@ -21,12 +21,12 @@ export default function FeaturedProperties({
       <SectionTitle title="Featured Properties" />
       <section className="grid grid-cols-2 gap-8" data-aos="fade-up">
         {properties.map(
-          ({ title, location, images }: PropertyCardProps, index) => (
+          ({ title, location, image }: PropertyCardProps, index) => (
             <PropertyCard
               key={index}
               featured
               title={title}
-              image={images[0]}
+              image={image}
               location={location}
             />
           )
