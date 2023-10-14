@@ -16,7 +16,12 @@
   }
 }
 
-body {
-  color: #000;
-  background: #fff;
+@layer utilities {
+  body {
+    color: #000;
+    background: #fff;
+  }
+  .page-container {
+    @apply px-24;
+  }
 }

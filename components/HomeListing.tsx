@@ -2,15 +2,10 @@
 
 import { useCallback, useEffect, useState } from 'react'
 
-import PropertyCard from '@/components/PropertyCard'
+import FeaturedProperties from './FeaturedProperties'
+import PropertyListing from '@/components/PropertyListing'
 
-interface PropertyCardProps {
-  title: string
-  location: string
-  images: string
-}
-
-export default function PropertiesListing() {
+export default function HomeListing() {
   const [isLoading, setIsLoading] = useState(true)
   const [properties, setProperties] = useState([])
 
@@ -33,18 +28,10 @@ export default function PropertiesListing() {
   return (
     <section className="my-12 w-full">
       {isLoading && <p>Loading...</p>}
-      {!isLoading && properties.length > 0 && (
-        <section className="grid grid-cols-4 gap-x-8 gap-y-14 my-10">
-          {properties.map(
-            ({ title, location, images }: PropertyCardProps, index) => (
-              <PropertyCard
-                key={index}
-                title={title}
-                location={location}
-                image={images[0]}
-              />
-            )
-          )}
+      {!isLoading && properties?.length > 0 && (
+        <section className="grid grid-flow-row gap-8">
+          <FeaturedProperties properties={properties.slice(0, 2)} />
+          <PropertyListing properties={properties} />
         </section>
       )}
     </section>

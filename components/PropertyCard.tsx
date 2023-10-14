@@ -1,17 +1,19 @@
-import { LocateIcon, MapPin } from 'lucide-react'
-
 import Image from 'next/image'
+import { MapPin } from 'lucide-react'
+import classNames from 'classnames'
 
 interface PropertyCardProps {
   title: string
   location: string
   image: string
+  featured: boolean
 }
 
 export default function PropertyCard({
   title,
+  image,
   location,
-  image
+  featured
 }: PropertyCardProps) {
   function appendDomain(imgUrl: string) {
     const domain = 'https://www.expats.cz/'
@@ -19,12 +21,20 @@ export default function PropertyCard({
   }
 
   return (
-    <article className="bg-white grid grid-flow-row gap-4 group">
-      <figure className="h-72 w-full relative overflow-hidden rounded-xl">
+    <article
+      className="bg-white grid grid-flow-row gap-4 group"
+      data-aos="fade-up">
+      <figure
+        className={classNames({
+          'h-96': featured,
+          'h-72': !featured,
+          'w-full relative overflow-hidden rounded-xl': true
+        })}>
         <Image
           fill
-          src={appendDomain(image)}
           alt={title}
+          priority={featured}
+          src={appendDomain(image)}
           className="object-cover group-hover:scale-125 transition-all duration-500 ease-in-out"
         />
       </figure>

@@ -1,5 +1,7 @@
 import './globals.css'
 
+import { HeartIcon, UserIcon } from 'lucide-react'
+
 import { Inter } from 'next/font/google'
 import type { Metadata } from 'next'
 
@@ -20,6 +22,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <NavBar />
         <main>{children}</main>
+        <Footer />
       </body>
     </html>
   )
@@ -27,8 +30,22 @@ export default function RootLayout({
 
 function NavBar() {
   return (
-    <nav className="w-full bg-white border-b px-24 py-6">
+    <nav className="w-full bg-white border-b page-container flex justify-between items-center py-5">
       <h1 className="text-2xl font-black text-blue-700">LUXO PROPERTIES</h1>
+      <button className="p-2 rounded-lg hover:bg-gray-50 border">
+        <UserIcon />
+      </button>
     </nav>
+  )
+}
+
+function Footer() {
+  return (
+    <footer className="w-full border-t flex justify-between text-base text-black/50 page-container py-6">
+      <p className="text-sm flex gap-2">
+        Made with <HeartIcon className="text-red-500" /> by{' '}
+        <span className="font-mono">Jishnu Raj</span>
+      </p>
+    </footer>
   )
 }
