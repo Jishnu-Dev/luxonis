@@ -35,7 +35,7 @@ export default function PropertyCard({
           alt={title}
           priority={featured}
           src={appendDomain(image)}
-          className="object-cover group-hover:scale-125 transition-all duration-500 ease-in-out"
+          className="object-cover group-hover:scale-125 transition-all duration-700 ease-in-out"
         />
       </figure>
       <section className="grid grid-flow-row gap-1">
