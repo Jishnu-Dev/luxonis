@@ -1,66 +1,81 @@
-// 'use client'
-
 import { useCallback, useEffect, useState } from 'react'
 
-import FeaturedProperties from './FeaturedProperties'
+import FeaturedProperties from '@/components/FeaturedProperties'
 import PropertyListing from '@/components/PropertyListing'
-import { getAdsData } from '@/api'
+import classNames from 'classnames'
 
-// const pool = new Pool({
-//   user: 'postgres',
-//   host: 'localhost',
-//   database: 'luxo_task_db',
-//   password: 'docker',
-//   port: 5432
-// })
+interface PaginationTypes {
+  currentPage: number
+  totalPages: number
+  setPage: Function
+}
 
 export default function HomeListing() {
   const [isLoading, setIsLoading] = useState(true)
-  const [properties, setProperties] = useState([])
+  const [ads, setAds] = useState([])
 
-  // const fetchData = useCallback(async () => {
-  //   const client = await pool.connect()
-  //   try {
-  //     setIsLoading(true)
-  //     const result = await client.query('SELECT * FROM ads')
-  //     console.log('result.rows::', result.rows)
-  //     return result.rows
-
-  //     // const resp = await fetch('/ads.json')
-  //     // const properties = await resp.json()
-  //     setProperties(properties)
-  //   } catch (e) {
-  //     console.error(e)
-  //   } finally {
-  //     client.release()
-  //     setIsLoading(false)
-  //   }
-  // }, [])
-  // useEffect(() => {
-  //   fetchData()
-  // }, [fetchData])
+  const [page, setPage] = useState(1)
+  const [totalPages, setTotalPages] = useState(0)
 
   const fetchData = useCallback(async () => {
     try {
       setIsLoading(true)
-      // const resp = await getAdsData()
-      // console.log('resp::', resp)
+      const resp = await fetch(`/api?page=${page}`)
+      const { rows, totalPages } = await resp.json()
+      setAds(rows)
+      setTotalPages(totalPages)
     } catch (e) {
       console.error(e)
     } finally {
       setIsLoading(false)
     }
-  }, [])
+  }, [page])
+
+  useEffect(() => {
+    fetchData()
+  }, [fetchData])
 
   return (
     <section className="my-12 w-full">
       {isLoading && <p>Loading...</p>}
-      {!isLoading && properties?.length > 0 && (
+      {!isLoading && ads?.length > 0 && (
         <section className="grid grid-flow-row gap-8">
-          <FeaturedProperties properties={properties.slice(0, 2)} />
-          <PropertyListing properties={properties} />
+          <FeaturedProperties properties={ads.slice(0, 2)} />
+          <PropertyListing properties={ads} />
+          <Pagination
+            currentPage={page}
+            totalPages={totalPages}
+            setPage={setPage}
+          />
         </section>
       )}
+      {!isLoading && !ads?.length && (
+        <p className="italic text-black/80">No data found</p>
+      )}
+    </section>
+  )
+}
+
+function Pagination({ currentPage, totalPages, setPage }: PaginationTypes) {
+  const pages = Array.from({ length: totalPages }, (_, i) => i + 1)
+  return (
+    <section className="flex flex-wrap gap-3 mt-12">
+      {pages.map(pageNum => {
+        const isActive = currentPage === pageNum
+        return (
+          <button
+            key={pageNum}
+            onClick={() => setPage(pageNum)}
+            className={classNames({
+              'bg-gray-200': !isActive,
+              'bg-blue-500 text-white': isActive,
+              'px-4 py-2 rounded-md cursor-pointer text-sm hover:bg-opacity-50':
+                true
+            })}>
+            {pageNum}
+          </button>
+        )
+      })}
     </section>
   )
 }

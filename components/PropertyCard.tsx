@@ -5,13 +5,13 @@ import classNames from 'classnames'
 interface PropertyCardProps {
   title: string
   location: string
-  image: string
+  image_url: string
   featured: boolean
 }
 
 export default function PropertyCard({
   title,
-  image,
+  image_url,
   location,
   featured
 }: PropertyCardProps) {
@@ -34,7 +34,7 @@ export default function PropertyCard({
           fill
           alt={title}
           priority={featured}
-          src={appendDomain(image)}
+          src={appendDomain(image_url)}
           className="object-cover group-hover:scale-125 transition-all duration-700 ease-in-out"
         />
       </figure>
