@@ -1,4 +1,11 @@
-FROM postgres
-ENV POSTGRES_PASSWORD docker
-ENV POSTGRES_DB luxonis_task_db
-COPY luxonis_task_db.sql /docker-entrypoint-initdb.d/
+FROM node:14
+
+WORKDIR /app
+
+COPY package*.json ./
+RUN npm install
+
+COPY . .
+
+EXPOSE 3000
+CMD ["npm", "start"]

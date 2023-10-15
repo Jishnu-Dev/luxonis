@@ -1,10 +1,34 @@
-version: '3.9'
-
+version: '3'
 services:
-  postgres:
-    image: postgres:12
+  # Next.js Application Service
+  web:
+    build:
+      context: ./
+      dockerfile: Dockerfile # Dockerfile for the Next.js app
+    ports:
+      - '8080:3000' # Maping host port 8080 to container port 3000
+    depends_on:
+      - db
     environment:
-      - POSTGRES_USER=val
-      -POSTGRES_PASSWORD=docker
-    volumes:
-      - data:/var/lib/postgresql/data
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_USER: postgres
+      DB_PASSWORD: docker
+      DB_NAME: luxo_task_db
+    networks:
+      - mynetwork
+
+  # PostgreSQL Database Service
+  db:
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: docker
+      POSTGRES_DB: luxo_task_db
+    ports:
+      - '5432:5432' # Maping host port 5432 to container port 5432
+    networks:
+      - mynetwork
+
+networks:
+  mynetwork:
