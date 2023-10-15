@@ -37,7 +37,7 @@ export default function HomeListing() {
 
   return (
     <section className="my-12 w-full">
-      {isLoading && <p>Loading...</p>}
+      {isLoading && <LoadingSkeleton />}
       {!isLoading && ads?.length > 0 && (
         <section className="grid grid-flow-row gap-8">
           <FeaturedProperties properties={ads.slice(0, 2)} />
@@ -57,15 +57,31 @@ export default function HomeListing() {
 }
 
 function Pagination({ currentPage, totalPages, setPage }: PaginationTypes) {
+  const isClient = typeof window !== 'undefined'
   const pages = Array.from({ length: totalPages }, (_, i) => i + 1)
+
+  function scrollToTop() {
+    if (isClient)
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+      })
+  }
+
+  function handlePageChange(page: number) {
+    scrollToTop()
+    setPage(page)
+  }
+
   return (
-    <section className="flex flex-wrap gap-3 mt-12">
+    <section data-aos="fade-up" className="flex flex-wrap gap-3 mt-12">
       {pages.map(pageNum => {
         const isActive = currentPage === pageNum
         return (
           <button
             key={pageNum}
-            onClick={() => setPage(pageNum)}
+            onClick={() => handlePageChange(pageNum)}
             className={classNames({
               'bg-gray-200': !isActive,
               'bg-blue-500 text-white': isActive,
@@ -76,6 +92,25 @@ function Pagination({ currentPage, totalPages, setPage }: PaginationTypes) {
           </button>
         )
       })}
+    </section>
+  )
+}
+
+function LoadingSkeleton() {
+  const cardClasses =
+    'bg-gray-200 animate-pulse rounded-xl bg-gray-200 animate-pulse rounded-xl'
+  return (
+    <section className="grid grid-flow-row gap-8">
+      <div className="grid grid-cols-2 gap-8">
+        {[...Array(2)].map((_, i) => (
+          <div key={i} className={`h-96 w-full ${cardClasses}`} />
+        ))}
+      </div>
+      <div className="grid grid-cols-4 gap-x-8 gap-y-14">
+        {[...Array(10)].map((_, i) => (
+          <div key={i} className={`w-full h-72 ${cardClasses}`} />
+        ))}
+      </div>
     </section>
   )
 }

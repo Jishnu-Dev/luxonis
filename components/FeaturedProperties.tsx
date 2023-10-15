@@ -19,7 +19,9 @@ export default function FeaturedProperties({
   return (
     <section>
       <SectionTitle title="Featured Properties" />
-      <section className="grid grid-cols-2 gap-8" data-aos="fade-up">
+      <section
+        className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8"
+        data-aos="fade-up">
         {properties.map(
           ({ title, location, image_url }: PropertyCardProps, index) => (
             <PropertyCard

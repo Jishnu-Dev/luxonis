@@ -32,6 +32,7 @@ export default function PropertyCard({
         })}>
         <Image
           fill
+          sizes=""
           alt={title}
           priority={featured}
           src={appendDomain(image_url)}
