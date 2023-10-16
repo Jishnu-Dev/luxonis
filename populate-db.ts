@@ -2,11 +2,11 @@ const { Pool } = require('pg')
 const fs = require('fs')
 
 const dbConfig = {
-  user: 'postgres',
-  host: 'localhost',
-  database: 'luxo_task_db',
-  password: 'docker',
-  port: 5432
+  user: process.env.DB_USER,
+  host: process.env.DB_HOST,
+  database: process.env.DATABASE,
+  password: process.env.DB_PASSWORD,
+  port: process.env.DB_PORT
 }
 
 const pool = new Pool(dbConfig)
@@ -19,12 +19,10 @@ const insertQuery = `INSERT INTO ads (title, location, image_url) VALUES ($1, $2
   const client = await pool.connect()
   try {
     await client.query('BEGIN')
-
     for (const data of jsonData) {
       const values = [data.title, data.location, data.image]
       await client.query(insertQuery, values)
     }
-
     await client.query('COMMIT')
   } catch (error) {
     await client.query('ROLLBACK')

@@ -17,6 +17,7 @@ export default function PropertyCard({
 }: PropertyCardProps) {
   function appendDomain(imgUrl: string) {
     const domain = 'https://www.expats.cz/'
+    if (imgUrl.startsWith('/')) imgUrl = imgUrl.substring(1)
     return domain + imgUrl
   }
 
