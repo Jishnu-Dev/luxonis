@@ -20,17 +20,15 @@ export default function HomeListing() {
   const fetchData = useCallback(async () => {
     try {
       setIsLoading(true)
-      const resp = await fetch(`/api?page=${page}`)
-      const { rows, totalPages } = await resp.json()
-      setAds(rows)
-      setTotalPages(totalPages)
+      const resp = await fetch('/properties.json')
+      const properties = await resp.json()
+      setAds(properties)
     } catch (e) {
       console.error(e)
     } finally {
       setIsLoading(false)
     }
-  }, [page])
-
+  }, [])
   useEffect(() => {
     fetchData()
   }, [fetchData])
