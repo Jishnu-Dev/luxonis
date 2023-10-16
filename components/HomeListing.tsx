@@ -21,7 +21,9 @@ export default function HomeListing() {
     try {
       setIsLoading(true)
       const resp = await fetch(`/api?page=${page}`)
+      console.log('resp::', resp)
       const { rows, totalPages } = await resp.json()
+      console.log('rows::', rows)
       setAds(rows)
       setTotalPages(totalPages)
     } catch (e) {
