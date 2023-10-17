@@ -1,5 +1,60 @@
 [
   {
+    "title": "Apartment for sale, 3+1 - 2 bedrooms, 80m2",
+    "location": "Sídliště Osvobození, Vyškov - Dědice",
+    "image_url": "/images/real_estate/properties/thumbs/300_192/2728/fd8f5450b71a3f9fb1e491c2f0001e9b.jpeg"
+  },
+  {
+    "title": "Apartment for sale, 2+1 - 1 bedroom, 59m2",
+    "location": "Pekařská, Opava - Město",
+    "image_url": "/images/real_estate/properties/thumbs/300_192/2728/6810192216829d1a6813a2a2351b6437.jpeg"
+  },
+  {
+    "title": "Apartment for sale, 3+1 - 2 bedrooms, 64m2",
+    "location": "Lesní, Varnsdorf",
+    "image_url": "/images/real_estate/properties/thumbs/300_192/2728/c45225875cbbe8ddd3b3690dfc5c9342.jpeg"
+  },
+  {
+    "title": "Apartment for sale, 2+1 - 1 bedroom, 50m2",
+    "location": "Rokycanova, Sokolov",
+    "image_url": "/images/real_estate/properties/thumbs/300_192/2727/0e9058045b872cbd51ffb7be7d3ee7c4.jpeg"
+  },
+  {
+    "title": "Apartment for sale, 2+kk - 1 bedroom, 64m2",
+    "location": "Cementářská, Praha 5 - Lochkov",
+    "image_url": "/images/real_estate/properties/thumbs/300_192/2726/feb631ff392f2ecbd8bbbebdb2f08607.jpeg"
+  },
+  {
+    "title": "Apartment for sale, 2+1 - 1 bedroom, 64m2",
+    "location": "Dělostřelců, Rokycany - Nové Město",
+    "image_url": "/images/real_estate/properties/thumbs/300_192/2726/3e66c4ee32ee339f71ad17e54b62aeb3.jpeg"
+  },
+  {
+    "title": "Apartment for sale, 5+1 - 4 bedrooms, 84m2",
+    "location": "Řehořova, Praha 3 - Žižkov",
+    "image_url": "/images/real_estate/properties/thumbs/300_192/2674/10e510ef99e9b7c49f5ff84e36776250.jpeg"
+  },
+  {
+    "title": "Apartment for sale, 2+kk - 1 bedroom, 76m2",
+    "location": "Masarykova, Rudná",
+    "image_url": "/images/real_estate/properties/thumbs/300_192/2728/ee9524d3dedc64cbe9b9d7b64f6c06cd.jpeg"
+  },
+  {
+    "title": "Apartment for sale, 3+1 - 2 bedrooms, 74m2",
+    "location": "Na Zámecké, Toužim",
+    "image_url": "/images/real_estate/properties/thumbs/300_192/2725/d24ad6dc7c440169e81f9133595385d8.jpeg"
+  },
+  {
+    "title": "Apartment for sale, 4+1 - 3 bedrooms, 108m2",
+    "location": "Plavy",
+    "image_url": "/images/real_estate/properties/thumbs/300_192/2725/4bd0b1c528c2a1f64bcff71152125287.jpeg"
+  },
+  {
+    "title": "Apartment for sale, 3+kk - 2 bedrooms, 64m2",
+    "location": "Výpadová, Praha 5 - Radotín",
+    "image_url": "/images/real_estate/properties/thumbs/300_192/2725/05f1769ac18863008878c919cab24266.jpeg"
+  },
+  {
     "title": "Apartment for sale, 4+kk - 3 bedrooms, 94m2",
     "location": "Střelecká, Hradec Králové",
     "image_url": "/images/real_estate/properties/thumbs/300_192/2725/1b7a27357a85beb2fb64b1b1cc52deed.jpeg"
@@ -17,7 +72,7 @@
   {
     "title": "Apartment for sale, 2+kk - 1 bedroom, 52m2",
     "location": "Bulharská, Praha 10 - Vršovice",
-    "image_url": "/images/real_estate/properties/thumbs/300_192/2724/906ed2c6f76c775c64334e0f82fad567.jpeg"
+    "image_url": "/images/real_estate/properties/thumbs/300_192/2727/d4050a2501abc044fab5b1fc90e02784.jpeg"
   },
   {
     "title": "Apartment for sale, 4+kk - 3 bedrooms, 103m2",
@@ -37,7 +92,7 @@
   {
     "title": "Apartment for sale, 4+kk - 3 bedrooms, 127m2",
     "location": "Koperníkova, Praha 2 - Vinohrady",
-    "image_url": "/images/real_estate/properties/thumbs/300_192/2724/7265201e219c063314abed379ca71a6f.jpeg"
+    "image_url": "/images/real_estate/properties/thumbs/300_192/2725/379ce9130c21a0e9cc5bb9ebce66bfe6.jpeg"
   },
   {
     "title": "Apartment for sale, 3+1 - 2 bedrooms, 65m2",
@@ -92,17 +147,17 @@
   {
     "title": "Apartment for sale, 1+KK - Studio, 29m2",
     "location": "Studentská, Praha 6 - Dejvice",
-    "image_url": "/images/real_estate/properties/thumbs/300_192/2722/0183fc1a6640dfb788483a646b29796f.jpeg"
+    "image_url": "/images/real_estate/properties/thumbs/300_192/2725/1cb4e5f7bc901eb35c36d1641ad40d2c.jpeg"
   },
   {
     "title": "Apartment for sale, 1+KK - Studio, 29m2",
     "location": "Studentská, Praha 6 - Dejvice",
-    "image_url": "/images/real_estate/properties/thumbs/300_192/2722/e3da125317349e0b41e9e6541b916546.jpeg"
+    "image_url": "/images/real_estate/properties/thumbs/300_192/2728/9254a0d282565a0c47e8d75a0e6c53e0.jpeg"
   },
   {
     "title": "Apartment for sale, 3+kk - 2 bedrooms, 103m2",
     "location": "Božanovská, Praha 9 - Horní Počernice",
-    "image_url": "/images/real_estate/properties/thumbs/300_192/2722/622dc159fd3635545ff7c7f9025141d7.jpeg"
+    "image_url": "/images/real_estate/properties/thumbs/300_192/2725/e5e6f5e86875fb7def250f148f36b84e.jpeg"
   },
   {
     "title": "Apartment for sale, 2+kk - 1 bedroom, 55m2",
@@ -153,11 +208,6 @@
     "title": "Apartment for sale, 4+kk - 3 bedrooms, 113m2",
     "location": "Letohradská, Kamenice - Ládví",
     "image_url": "/images/real_estate/properties/thumbs/300_192/2721/71e9502daf1996945a1e9290d6625423.jpeg"
-  },
-  {
-    "title": "Apartment for sale, 5+1 - 4 bedrooms, 84m2",
-    "location": "Řehořova, Praha 3 - Žižkov",
-    "image_url": "/images/real_estate/properties/thumbs/300_192/2674/10e510ef99e9b7c49f5ff84e36776250.jpeg"
   },
   {
     "title": "Apartment for sale, Atypical layout, 96m2",
@@ -225,7 +275,7 @@
     "image_url": "/images/real_estate/properties/thumbs/300_192/2722/c4aecd8f89cfb9d7674ca2ddfc1e286b.jpeg"
   },
   {
-    "title": "Apartment for sale, 3+1 - 2 bedrooms, 67m2",
+    "title": "Apartment for sale, 3+1 - 2 bedrooms, 71m2",
     "location": "Sadová, Nové Město nad Metují",
     "image_url": "/images/real_estate/properties/thumbs/300_192/2717/1dfbf1ac957d69ef264ab6e4c0b2e1d8.jpeg"
   },
@@ -393,11 +443,6 @@
     "title": "Apartment for sale, 1+KK - Studio, 24m2",
     "location": "Vavřenova, Praha 4 - Braník",
     "image_url": "/images/real_estate/properties/thumbs/300_192/2707/edc9ec0a1d74abb12fada01efaa3a976.jpeg"
-  },
-  {
-    "title": "Apartment for sale, 3+1 - 2 bedrooms, 67m2",
-    "location": "17. listopadu, Opava - Kylešovice",
-    "image_url": "/images/real_estate/properties/thumbs/300_192/2707/90c02d1d0fa6dc5764501136e19b63ac.jpeg"
   },
   {
     "title": "Apartment for sale, 2+kk - 1 bedroom, 54m2",
@@ -592,7 +637,7 @@
   {
     "title": "Apartment for sale, 2+1 - 1 bedroom, 63m2",
     "location": "Zahradní, Hranice",
-    "image_url": "/images/real_estate/properties/thumbs/300_192/2694/a61bb023580e6c7f13f60f5fc2640c51.jpeg"
+    "image_url": "/images/real_estate/properties/thumbs/300_192/2725/3a9fc76927abce22c8f230bdc09bcf1d.jpeg"
   },
   {
     "title": "Apartment for sale, 2+kk - 1 bedroom, 67m2",
@@ -628,11 +673,6 @@
     "title": "Apartment for sale, 3+kk - 2 bedrooms, 83m2",
     "location": "U Homolky, Praha 5 - Motol",
     "image_url": "/images/real_estate/properties/thumbs/300_192/2692/c2f6cc78e6ad6683b216260a9aba8d1e.jpeg"
-  },
-  {
-    "title": "Apartment for sale, 4+kk - 3 bedrooms, 82m2",
-    "location": "Ke stadionu, Praha 9 - Čakovice",
-    "image_url": "/images/real_estate/properties/thumbs/300_192/2691/2f97a094e92ddde3ea8481ece9110fdb.jpeg"
   },
   {
     "title": "Apartment for sale, 2+1 - 1 bedroom, 73m2",
@@ -722,7 +762,7 @@
   {
     "title": "Apartment for sale, 4+kk - 3 bedrooms, 74m2",
     "location": "Fryčovická, Praha 9 - Letňany",
-    "image_url": "/images/real_estate/properties/thumbs/300_192/2703/6935758c333e57f4ce7a3cb9ce43f09e.jpeg"
+    "image_url": "/images/real_estate/properties/thumbs/300_192/2728/8d4a1f221f314cc4b59618c6791df2e7.jpeg"
   },
   {
     "title": "Apartment for sale, 5+kk - 4 bedrooms, 104m2",
@@ -768,11 +808,6 @@
     "title": "Apartment for sale, 3+1 - 2 bedrooms, 68m2",
     "location": "Pod Skalkou, Přerov - Přerov II-Předmostí",
     "image_url": "/images/real_estate/properties/thumbs/300_192/2684/d8b064b99e6e1409dcffd6828d974394.jpeg"
-  },
-  {
-    "title": "Apartment for sale, 3+1 - 2 bedrooms, 68m2",
-    "location": "Olomoucká, Opava - Předměstí",
-    "image_url": "/images/real_estate/properties/thumbs/300_192/2683/e9dfc192a4f262569b826d1e86a57b65.jpeg"
   },
   {
     "title": "Apartment for sale, 1+KK - Studio, 34m2",
@@ -1117,42 +1152,42 @@
   {
     "title": "Apartment for sale, 3+kk - 2 bedrooms, 100m2",
     "location": "Meruňková, Hradec Králové - Plotiště nad Labem",
-    "image_url": "/images/real_estate/properties/thumbs/300_192/2687/a33597cd444d7a8a6b88468de3ac4e74.jpeg"
+    "image_url": "/images/real_estate/properties/thumbs/300_192/2726/91a4abbe8dd956fc1b50a66e5028bdcd.jpeg"
   },
   {
     "title": "Apartment for sale, 1+KK - Studio, 58m2",
     "location": "Meruňková, Hradec Králové - Plotiště nad Labem",
-    "image_url": "/images/real_estate/properties/thumbs/300_192/2687/44055a3f3dc08c374d4c297af6e028dc.jpeg"
+    "image_url": "/images/real_estate/properties/thumbs/300_192/2726/67e1c98f5baedde360f36bd60de5b12e.jpeg"
   },
   {
     "title": "Apartment for sale, 3+kk - 2 bedrooms, 102m2",
     "location": "Meruňková, Hradec Králové - Plotiště nad Labem",
-    "image_url": "/images/real_estate/properties/thumbs/300_192/2687/251028e57c669fd91f09e32dbef6746d.jpeg"
+    "image_url": "/images/real_estate/properties/thumbs/300_192/2725/78fa4fb7ad2c763a5d734988878d6f18.jpeg"
   },
   {
     "title": "Apartment for sale, 2+kk - 1 bedroom, 77m2",
     "location": "Meruňková, Hradec Králové - Plotiště nad Labem",
-    "image_url": "/images/real_estate/properties/thumbs/300_192/2687/1e77d37a078e78f1f52acb57d1eea273.jpeg"
+    "image_url": "/images/real_estate/properties/thumbs/300_192/2725/a61bedaa373aa250423b66217ec72738.jpeg"
   },
   {
     "title": "Apartment for sale, 2+kk - 1 bedroom, 72m2",
     "location": "Meruňková, Hradec Králové - Plotiště nad Labem",
-    "image_url": "/images/real_estate/properties/thumbs/300_192/2687/8ef5ade593ffa02be1587e4dfb06d572.jpeg"
+    "image_url": "/images/real_estate/properties/thumbs/300_192/2725/63435d10f6f71f1902e90dbe908d5f27.jpeg"
   },
   {
     "title": "Apartment for sale, 2+kk - 1 bedroom, 90m2",
     "location": "Meruňková, Hradec Králové - Plotiště nad Labem",
-    "image_url": "/images/real_estate/properties/thumbs/300_192/2687/9ead03828de109badfba50cddde86cb7.jpeg"
+    "image_url": "/images/real_estate/properties/thumbs/300_192/2725/2bac83536c3c8189c1c5e8ffc862d812.jpeg"
   },
   {
     "title": "Apartment for sale, 2+kk - 1 bedroom, 75m2",
     "location": "Meruňková, Hradec Králové - Plotiště nad Labem",
-    "image_url": "/images/real_estate/properties/thumbs/300_192/2652/a312ef2a1d023e4b08b03c4699d45e9c.jpeg"
+    "image_url": "/images/real_estate/properties/thumbs/300_192/2725/7d96cd14b5c5f0b8b55e60f3f21da822.jpeg"
   },
   {
     "title": "Apartment for sale, 2+kk - 1 bedroom, 71m2",
     "location": "Meruňková, Hradec Králové - Plotiště nad Labem",
-    "image_url": "/images/real_estate/properties/thumbs/300_192/2686/c3c9d130c87f5cc927742528465b963b.jpeg"
+    "image_url": "/images/real_estate/properties/thumbs/300_192/2725/1f09335b224aadda97abc89431e306b5.jpeg"
   },
   {
     "title": "Apartment for sale, 2+1 - 1 bedroom, 75m2",
@@ -1252,17 +1287,12 @@
   {
     "title": "Apartment for sale, 3+kk - 2 bedrooms, 109m2",
     "location": "Pod Krocínkou, Praha 9 - Vysočany",
-    "image_url": "/images/real_estate/properties/thumbs/300_192/2702/eee224e6afe84711b195ca498b5f2443.jpeg"
+    "image_url": "/images/real_estate/properties/thumbs/300_192/2727/9361d676a210aa840b9782017c7d0f54.jpeg"
   },
   {
     "title": "Apartment for sale, 3+kk - 2 bedrooms, 108m2",
     "location": "Pod Krocínkou, Praha 9 - Vysočany",
-    "image_url": "/images/real_estate/properties/thumbs/300_192/2723/f10a08a42a1114b0e10ac1839c132329.jpeg"
-  },
-  {
-    "title": "Apartment for sale, 4+kk - 3 bedrooms, 133m2",
-    "location": "Pod Krocínkou, Praha 9 - Vysočany",
-    "image_url": "/images/real_estate/properties/thumbs/300_192/2723/1d183f3987c9c0fb1ba3348281abb619.jpeg"
+    "image_url": "/images/real_estate/properties/thumbs/300_192/2723/412443b78afcd59368529df6baab20a9.jpeg"
   },
   {
     "title": "Apartment for sale, 3+1 - 2 bedrooms, 78m2",
@@ -1303,11 +1333,6 @@
     "title": "Apartment for sale, 3+1 - 2 bedrooms, 71m2",
     "location": "Hamerská, Litvínov - Hamr",
     "image_url": "/images/real_estate/properties/thumbs/300_192/2637/5d4839a9f2544d3ee03919d408a7b98d.jpeg"
-  },
-  {
-    "title": "Apartment for sale, 3+1 - 2 bedrooms, 96m2",
-    "location": "Hany Kvapilové, Opava - Předměstí",
-    "image_url": "/images/real_estate/properties/thumbs/300_192/2636/a134e49c7fe2a0acfcdba09c245fe018.jpeg"
   },
   {
     "title": "Apartment for sale, 2+kk - 1 bedroom, 56m2",
@@ -1450,11 +1475,6 @@
     "image_url": "/images/real_estate/properties/thumbs/300_192/2614/95e1048e6a75bd368f3fa4dac9964999.jpeg"
   },
   {
-    "title": "Apartment for sale, 3+kk - 2 bedrooms, 67m2",
-    "location": "Vodičkova, Praha 1 - Nové Město",
-    "image_url": "/images/real_estate/properties/thumbs/300_192/2613/fbcff2eff33fc7d699001db577f135e1.jpeg"
-  },
-  {
     "title": "Apartment for sale, 3+1 - 2 bedrooms, 67m2",
     "location": "Budeč",
     "image_url": "/images/real_estate/properties/thumbs/300_192/2612/0f46caca2e0ba115fb23152648c0e2f5.jpeg"
@@ -1467,7 +1487,7 @@
   {
     "title": "Apartment for sale, 4+1 - 3 bedrooms, 198m2",
     "location": "Janáčkovo nábřeží, Praha 5 - Malá Strana",
-    "image_url": "/images/real_estate/properties/thumbs/300_192/2723/5982ea971617d81c3a9bc3b327488c9e.jpeg"
+    "image_url": "/images/real_estate/properties/thumbs/300_192/2727/7f436417f977f0149f0d697a52056ad9.jpeg"
   },
   {
     "title": "Apartment for sale, 1+KK - Studio, 35m2",
@@ -1655,11 +1675,6 @@
     "image_url": "/images/real_estate/properties/thumbs/300_192/2589/de8219db40c27112b2c2b123a2cdd9e2.jpeg"
   },
   {
-    "title": "Apartment for sale, 3+1 - 2 bedrooms, 71m2",
-    "location": "Fučíkova, Planá",
-    "image_url": "/images/real_estate/properties/thumbs/300_192/2589/d3c97c60b2201dae7b69cbf96e00b342.jpeg"
-  },
-  {
     "title": "Apartment for sale, 2+kk - 1 bedroom, 56m2",
     "location": "Uhelný trh, Praha 1 - Staré Město",
     "image_url": "/images/real_estate/properties/thumbs/300_192/2587/3419d5da42e0a5200de116b025f58a0d.jpeg"
@@ -1668,16 +1683,6 @@
     "title": "Apartment for sale, 3+1 - 2 bedrooms, 92m2",
     "location": "Chodská, Praha 2 - Vinohrady",
     "image_url": "/images/real_estate/properties/thumbs/300_192/2672/e48173111229551df807794b157d7a5f.jpeg"
-  },
-  {
-    "title": "Apartment for sale, 1+KK - Studio, 27m2",
-    "location": "V kolkovně, Praha 1 - Staré Město",
-    "image_url": "/images/real_estate/properties/thumbs/300_192/2585/b5a18ea8eb9ee4ca66bcdc1aafa3cfe2.jpeg"
-  },
-  {
-    "title": "Apartment for sale, 4+1 - 3 bedrooms, 67m2",
-    "location": "Růžová, Most",
-    "image_url": "/images/real_estate/properties/thumbs/300_192/2585/e4aab0e1e099dfd88a68fe7cedf5870e.jpeg"
   },
   {
     "title": "Apartment for sale, 2+kk - 1 bedroom, 60m2",
@@ -1795,11 +1800,6 @@
     "image_url": "/images/real_estate/properties/thumbs/300_192/2659/77876daa16a7f7f123afc3362145fe68.jpeg"
   },
   {
-    "title": "Apartment for sale, 2+kk - 1 bedroom, 50m2",
-    "location": "V zahradách, Praha 8 - Libeň",
-    "image_url": "/images/real_estate/properties/thumbs/300_192/2575/6c25b4a091318cd9b25f3030f8290493.jpeg"
-  },
-  {
     "title": "Apartment for sale, 2+kk - 1 bedroom, 41m2",
     "location": "V zahradách, Praha 8 - Libeň",
     "image_url": "/images/real_estate/properties/thumbs/300_192/2616/0c911bdc42e04ab7b33e2432417ff7a8.jpeg"
@@ -1837,7 +1837,7 @@
   {
     "title": "Apartment for sale, 1+KK - Studio, 34m2",
     "location": "Sudoměřská, Praha 3 - Žižkov",
-    "image_url": "/images/real_estate/properties/thumbs/300_192/2664/5649fa5af58cafce5b6c98769817dac0.jpeg"
+    "image_url": "/images/real_estate/properties/thumbs/300_192/2725/4e3261732e0dcfd90b5a8ea7fae197ad.jpeg"
   },
   {
     "title": "Apartment for sale, 2+kk - 1 bedroom, 41m2",
@@ -2037,7 +2037,7 @@
   {
     "title": "Apartment for sale, 3+1 - 2 bedrooms, 59m2",
     "location": "Plavy",
-    "image_url": "/images/real_estate/properties/thumbs/300_192/2543/28128cbfc9dc6e5edf6cafa0ad575af2.jpeg"
+    "image_url": "/images/real_estate/properties/thumbs/300_192/2725/987606873e6e88b33a1763c0bb0b7d91.jpeg"
   },
   {
     "title": "Apartment for sale, 2+kk - 1 bedroom, 60m2",
@@ -2246,7 +2246,7 @@
   },
   {
     "title": "Apartment for sale, 1+KK - Studio, 46m2",
-    "location": "Slavíkova, Jince",
+    "location": "Sestupná, Praha 6 - Liboc",
     "image_url": "/images/real_estate/properties/thumbs/300_192/2614/87ea0cd9a75e33953f6e87786d0a6c8c.jpeg"
   },
   {
@@ -2277,17 +2277,17 @@
   {
     "title": "Apartment for sale, 4+kk - 3 bedrooms, 134m2",
     "location": "Norská, Praha 10 - Vršovice",
-    "image_url": "/images/real_estate/properties/thumbs/300_192/2713/cf267c0dfedf472afff226e9f680c8c6.jpeg"
+    "image_url": "/images/real_estate/properties/thumbs/300_192/2727/adcdcb50ca1c6fc0661b068838256214.jpeg"
   },
   {
     "title": "Apartment for sale, 2+kk - 1 bedroom, 46m2",
     "location": "Norská, Praha 10 - Vršovice",
-    "image_url": "/images/real_estate/properties/thumbs/300_192/2723/16ed63296c6d4ab2d619a20988b7dd8f.jpeg"
+    "image_url": "/images/real_estate/properties/thumbs/300_192/2727/e74e96349f0c0226c95958bea0d4ac52.jpeg"
   },
   {
     "title": "Apartment for sale, 1+KK - Studio, 32m2",
     "location": "Norská, Praha 10 - Vršovice",
-    "image_url": "/images/real_estate/properties/thumbs/300_192/2723/6d794dc09b1e92f16da490b288b4be35.jpeg"
+    "image_url": "/images/real_estate/properties/thumbs/300_192/2727/7e26aa932c33a1dbaa232036f1ba9778.jpeg"
   },
   {
     "title": "Apartment for sale, 3+kk - 2 bedrooms, 72m2",
@@ -2417,7 +2417,7 @@
   {
     "title": "Apartment for sale, 2+kk - 1 bedroom, 53m2",
     "location": "Plavy",
-    "image_url": "/images/real_estate/properties/thumbs/300_192/2471/8b2dab38ff13eac8a0fd850b5795ccd2.jpeg"
+    "image_url": "/images/real_estate/properties/thumbs/300_192/2725/764df3a973a513303eee8dcfbc544463.jpeg"
   },
   {
     "title": "Apartment for sale, 4+1 - 3 bedrooms, 80m2",
@@ -2432,7 +2432,7 @@
   {
     "title": "Apartment for sale, 3+1 - 2 bedrooms, 76m2",
     "location": "Nad lesním divadlem, Praha 4 - Braník",
-    "image_url": "/images/real_estate/properties/thumbs/300_192/2675/f1082f52ba32ef4071acd807d22d978e.jpeg"
+    "image_url": "/images/real_estate/properties/thumbs/300_192/2727/735b7fc21612ee42de12849c167258b5.jpeg"
   },
   {
     "title": "Apartment for sale, 3+1 - 2 bedrooms, 91m2",
@@ -2457,7 +2457,7 @@
   {
     "title": "Apartment for sale, 2+kk - 1 bedroom, 57m2",
     "location": "Plavy",
-    "image_url": "/images/real_estate/properties/thumbs/300_192/2466/ea20818acbe76947e2b79a66ef17a3b4.jpeg"
+    "image_url": "/images/real_estate/properties/thumbs/300_192/2725/8b7fe296a7ab3bef6c8de89ebc5d065f.jpeg"
   },
   {
     "title": "Apartment for sale, 2+kk - 1 bedroom, 53m2",

@@ -6,8 +6,8 @@ const targetURL = 'https://www.expats.cz/praguerealestate/apartments/for-sale'
 const itemsPerPage = 15
 const targetItemCount = 500
 let scrapedProperties = []
-console.info('SCRAPING STARTED...')
 
+console.info('SCRAPING STARTED...')
 const getSiteData = async page => {
   try {
     const response = await axios.get(`${targetURL}/${page}`)
@@ -26,7 +26,7 @@ const getSiteData = async page => {
       property.location = $(prop).find('h3').text()
 
       // Find image URLs
-      property.image = $(prop).find('a > img').attr('src')
+      property.image_url = $(prop).find('a > img').attr('src')
       if (property['title'] !== '') properties.push(property)
     })
 

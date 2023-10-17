@@ -48,7 +48,6 @@ export default function Home() {
     fetchData()
   }, [fetchData])
 
-  // return null
   return (
     <main className="flex min-h-screen flex-col p-6 md:p-24">
       <HomeHero />
