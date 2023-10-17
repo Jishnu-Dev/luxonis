@@ -1,4 +1,4 @@
-FROM node:14
+FROM node:20-slim
 
 WORKDIR /app
 
@@ -8,4 +8,7 @@ RUN npm install
 COPY . .
 
 EXPOSE 3000
-CMD ["npm", "start"]
+
+RUN npm run build
+
+CMD ["sh", "-c", "node populate-db.ts && npm start"]
