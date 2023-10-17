@@ -1,5 +1,22 @@
 version: '3'
 services:
+  # PostgreSQL Database Service
+  db:
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: docker
+      POSTGRES_DB: luxo_task_db
+      NEXT_TELEMETRY_DISABLED: 1
+    ports:
+      - '5432:5432' # Mapping host port 5432 to container port 5432
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U postgres']
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    networks:
+      - mynetwork
   # Next.js Application Service
   web:
     build:
@@ -17,24 +34,6 @@ services:
       DB_PASSWORD: docker
       DB_NAME: luxo_task_db
       NEXT_TELEMETRY_DISABLED: 1
-    networks:
-      - mynetwork
-
-  # PostgreSQL Database Service
-  db:
-    image: postgres
-    environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: docker
-      POSTGRES_DB: luxo_task_db
-      NEXT_TELEMETRY_DISABLED: 1
-    ports:
-      - '5432:5432' # Mapping host port 5432 to container port 5432
-    healthcheck:
-      test: ['CMD-SHELL', 'pg_isready -U postgres']
-      interval: 5s
-      timeout: 5s
-      retries: 5
     networks:
       - mynetwork
 

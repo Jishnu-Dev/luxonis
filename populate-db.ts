@@ -2,7 +2,8 @@ const { Pool } = require('pg')
 const fs = require('fs')
 
 console.info('Info:: ENTERED SCRIPT...')
-export const pool = new Pool({
+
+const pool = new Pool({
   user: 'postgres',
   host: 'db',
   database: 'luxo_task_db',
