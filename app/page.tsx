@@ -18,6 +18,7 @@ interface PaginationTypes {
 }
 
 export default function Home() {
+  const itemsPerPage = 24
   const [isLoading, setIsLoading] = useState(true)
   const [ads, setAds] = useState([])
 
@@ -27,35 +28,37 @@ export default function Home() {
   const fetchData = useCallback(async () => {
     try {
       setIsLoading(true)
-      // const resp = await fetch(`/api?page=${page}`)
-      const resp = await fetch(`/api`)
-      console.log('resp::', resp)
-      const { rows, totalPages } = await resp.json()
-      console.log('rows::', rows)
+      const resp = await fetch(`/ads.json`)
+      const rows = await resp.json()
       setAds(rows)
-      setTotalPages(totalPages)
+      setTotalPages(Math.ceil(rows.length / itemsPerPage))
     } catch (e) {
       console.error(e)
     } finally {
       setIsLoading(false)
     }
-  }, [page])
+  }, [])
+
+  const startIndex = (page - 1) * itemsPerPage
+  const endIndex = startIndex + itemsPerPage
+  const itemsToDisplay = ads.slice(startIndex, endIndex)
 
   useEffect(() => {
     AOS.init({ duration: 1100 })
     fetchData()
   }, [fetchData])
 
+  // return null
   return (
-    <main className="flex min-h-screen flex-col p-24">
+    <main className="flex min-h-screen flex-col p-6 md:p-24">
       <HomeHero />
       {/* Ads listing */}
       <section className="my-12 w-full">
         {isLoading && <LoadingSkeleton />}
         {!isLoading && ads?.length > 0 && (
           <section className="grid grid-flow-row gap-8">
-            <FeaturedProperties properties={ads.slice(0, 2)} />
-            <PropertyListing properties={ads} />
+            <FeaturedProperties properties={itemsToDisplay.slice(0, 2)} />
+            <PropertyListing properties={itemsToDisplay} />
             <Pagination
               currentPage={page}
               totalPages={totalPages}
@@ -74,7 +77,7 @@ export default function Home() {
 function HomeHero() {
   return (
     <section>
-      <h1 className="text-5xl font-bold">
+      <h1 className="text-2xl md:text-5xl font-bold">
         Real Estate in Prague & Czech Republic
       </h1>
       <h2 className="text-md">
@@ -103,7 +106,9 @@ function Pagination({ currentPage, totalPages, setPage }: PaginationTypes) {
   }
 
   return (
-    <section data-aos="fade-up" className="flex flex-wrap gap-3 mt-12">
+    <section
+      data-aos="fade-up"
+      className="flex flex-wrap justify-center gap-3 mt-12">
       {pages.map(pageNum => {
         const isActive = currentPage === pageNum
         return (
@@ -134,9 +139,9 @@ function LoadingSkeleton() {
           <div key={i} className={`h-96 w-full ${cardClasses}`} />
         ))}
       </div>
-      <div className="grid grid-cols-4 gap-x-8 gap-y-14">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-14">
         {[...Array(10)].map((_, i) => (
-          <div key={i} className={`w-full h-72 ${cardClasses}`} />
+          <div key={i} className={`w-full h-40 md:h-72 ${cardClasses}`} />
         ))}
       </div>
     </section>

@@ -28,7 +28,7 @@ export default function PropertyCard({
       <figure
         className={classNames({
           'h-96': featured,
-          'h-72': !featured,
+          'h-40 md:h-72': !featured,
           'w-full relative overflow-hidden rounded-xl': true
         })}>
         <Image
@@ -41,8 +41,8 @@ export default function PropertyCard({
         />
       </figure>
       <section className="grid grid-flow-row gap-1">
-        <h2 className="text-md font-medium">{title}</h2>
-        <h3 className="text-sm text-black/80 font-medium flex gap-1.5 items-center">
+        <h2 className="text-sm md:text-md font-medium">{title}</h2>
+        <h3 className="text-xs md:text-sm text-black/80 font-medium flex gap-1.5 items-center">
           <MapPin size={16} />
           {location}
         </h3>
