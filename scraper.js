@@ -6,6 +6,7 @@ const targetURL = 'https://www.expats.cz/praguerealestate/apartments/for-sale'
 const itemsPerPage = 15
 const targetItemCount = 500
 let scrapedProperties = []
+
 console.info('SCRAPING STARTED...')
 
 const getSiteData = async page => {

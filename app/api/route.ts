@@ -13,8 +13,8 @@ const pool = new Pool({
 export async function GET(request: NextRequest) {
   try {
     const limit = 10
-    // const searchParams = request.nextUrl.searchParams
-    // const page = searchParams.get('page')
+    // const searchParams = request.nextUrl.searchParams // To be used
+    // const page = searchParams.get('page') // To be used
     const page = '1'
 
     if (page) {

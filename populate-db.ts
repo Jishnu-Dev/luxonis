@@ -11,17 +11,6 @@ const pool = new Pool({
   port: 5432
 })
 
-// async function createDatabase() {
-//   const client = await pool.connect()
-//   try {
-//     await client.query(
-//       `CREATE DATABASE IF NOT EXISTS ${process.env.NEXT_PUBLIC_DB_NAME}`
-//     )
-//   } finally {
-//     client.release()
-//   }
-// }
-
 async function createTables() {
   console.info('Info:: CONNECTING TO DB...')
   const client = await pool.connect()
@@ -69,7 +58,6 @@ async function populateAdsTable() {
 
 async function main() {
   try {
-    // await createDatabase()
     await createTables()
     await populateAdsTable()
     console.info(
