@@ -9,7 +9,8 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Luxonis App - Jishnu Raj',
-  description: 'Created by Jishnu Raj'
+  description:
+    'An app made with Next.Js 13 App router for the UI, TypeScript for type safety, Postgres for schema, Vercel for deployment, and cheerio for web scrapping. Created by Jishnu Raj.'
 }
 
 export default function RootLayout({
