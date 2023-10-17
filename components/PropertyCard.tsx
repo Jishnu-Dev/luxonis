@@ -17,6 +17,7 @@ export default function PropertyCard({
 }: PropertyCardProps) {
   function appendDomain(imgUrl: string) {
     const domain = 'https://www.expats.cz'
+    console.log('URL:', domain + imgUrl)
     return domain + imgUrl
   }
 
@@ -32,10 +33,10 @@ export default function PropertyCard({
         })}>
         <Image
           fill
-          sizes=""
           alt={title}
           priority={featured}
           src={appendDomain(image_url)}
+          sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 25vw"
           className="object-cover group-hover:scale-125 transition-all duration-700 ease-in-out"
         />
       </figure>
