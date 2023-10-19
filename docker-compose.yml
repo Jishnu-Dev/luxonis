@@ -17,7 +17,7 @@ services:
       - /app/node_modules
       - /app/.next
     ports:
-      - 3000:3000
+      - 8080:3000
   backend:
     container_name: backend
     image: postgres
@@ -32,4 +32,3 @@ services:
       interval: 5s
       timeout: 5s
       retries: 5
-    # command: node populate-db.ts

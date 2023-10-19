@@ -1,8 +1,7 @@
 const { Pool } = require('pg')
 const fs = require('fs')
 
-console.info('Info:: ENTERED SCRIPT...')
-
+console.info('Info:: INITIALIZING DB...')
 const pool = new Pool({
   host: 'backend',
   port: 5432,
