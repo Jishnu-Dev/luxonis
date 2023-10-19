@@ -1,42 +1,35 @@
-version: '3'
-
-networks:
-  mynetwork:
-    driver: bridge
-
+version: '3.8'
 services:
-  # PostgreSQL Database Service
-  db:
+  frontend:
+    container_name: frontend
+    depends_on:
+      backend:
+        condition: service_healthy
+    build:
+      context: .
+      target: dev
+    restart: always
+    command: sh -c "node populate-db.ts && yarn dev"
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - /app/.next
+    ports:
+      - 3000:3000
+  backend:
+    container_name: backend
     image: postgres
     environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: docker
-      POSTGRES_DB: luxo_task_db
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=docker
+      - POSTGRES_DB=luxo_task_db
     ports:
-      - '5432:5432' # Mapping host port 5432 to container port 5432
+      - '5432:5432'
     healthcheck:
       test: ['CMD-SHELL', 'pg_isready -U postgres']
       interval: 5s
       timeout: 5s
       retries: 5
-    networks:
-      - mynetwork
-
-  # Next.js Application Service
-  web:
-    build:
-      context: ./
-      dockerfile: Dockerfile # Dockerfile for the Next.js app
-    ports:
-      - '8080:3000' # Mapping host port 8080 to container port 3000
-    depends_on:
-      db:
-        condition: service_healthy
-    environment:
-      DB_HOST: db
-      DB_PORT: 5432
-      DB_USER: postgres
-      DB_PASSWORD: docker
-      DB_NAME: luxo_task_db
-    networks:
-      - mynetwork
+    # command: node populate-db.ts

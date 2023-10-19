@@ -1,28 +1,52 @@
-FROM node:20-slim
+FROM node:20-slim AS base
+
+# Install dependencies only when needed
+FROM base AS deps
 
 WORKDIR /app
 
-# ENV NEXT_TELEMETRY_DISABLED 1
+# Install dependencies based on the preferred package manager
+COPY package.json yarn.lock* package-lock.json* pnpm-lock.yaml* ./
+RUN \
+  if [ -f yarn.lock ]; then yarn --frozen-lockfile; \
+  elif [ -f package-lock.json ]; then npm ci; \
+  elif [ -f pnpm-lock.yaml ]; then yarn global add pnpm && pnpm i --frozen-lockfile; \
+  else echo "Lockfile not found." && exit 1; \
+  fi
 
-# TEST: Install psql
-# RUN apt-get update && apt-get install -y postgresql-client
+FROM base AS dev
 
-COPY package*.json ./
-RUN yarn
-
+WORKDIR /app
+COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
-# TEST: WAIT FOR IT
-# COPY wait-for-it.sh /usr/local/bin/wait-for-it.sh
-# RUN chmod +x /usr/local/bin/wait-for-it.sh
-# TEST: WAIT FOR IT
+# Rebuild the source code only when needed
+FROM base AS builder
+WORKDIR /app
+COPY --from=deps /app/node_modules ./node_modules
+COPY . .
 
-EXPOSE 3000
+ENV NEXT_TELEMETRY_DISABLED 1
 
 RUN yarn build
 
-# ORIGINAL, TO KEEP:
-CMD ["sh", "-c", "node populate-db.ts && npm start"]
+FROM base AS runner
 
-# TEST: WAIT FOR IT
-# CMD ["sh", "-c", "wait-for-it.sh db:5432 -- node populate-db.ts && npm start"]
+WORKDIR /app
+
+
+RUN addgroup --system --gid 1001 nodejs
+RUN adduser --system --uid 1001 nextjs
+
+COPY --from=builder /app/public ./public
+
+# Automatically leverage output traces to reduce image size
+# https://nextjs.org/docs/advanced-features/output-file-tracing
+COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
+COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
+
+USER nextjs
+
+# CMD ["node", "server.js"]
+CMD ["node", "populate-db.ts"]
+# CMD ["sh", "-c", "node populate-db.ts && npm start"]

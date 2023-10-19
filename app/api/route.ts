@@ -3,7 +3,7 @@ import { type NextRequest } from 'next/server'
 import { Pool } from 'pg'
 
 const pool = new Pool({
-  host: 'localhost',
+  host: 'backend',
   port: 5432,
   user: 'postgres',
   database: 'luxo_task_db',

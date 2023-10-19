@@ -4,7 +4,7 @@ const fs = require('fs')
 console.info('Info:: ENTERED SCRIPT...')
 
 const pool = new Pool({
-  host: 'db',
+  host: 'backend',
   port: 5432,
   user: 'postgres',
   database: 'luxo_task_db',
@@ -34,7 +34,6 @@ async function createTables() {
 async function populateAdsTable() {
   const client = await pool.connect()
   console.info('Info:: POPULATING TABLE...')
-
   try {
     await client.query('BEGIN')
     const jsonFilePath = './public/ads.json'
