@@ -5,33 +5,29 @@ import 'aos/dist/aos.css'
 import { useCallback, useEffect, useState } from 'react'
 
 import AOS from 'aos'
+import AdsPerPage from '@/components/AdsPerPage'
 import FeaturedProperties from '@/components/FeaturedProperties'
+import HomeHero from '@/components/HomeHero'
+import LoadingSkeleton from '@/components/LoadingSkeleton'
+import Pagination from '@/components/Pagination'
 import PropertyListing from '@/components/PropertyListing'
-import classNames from 'classnames'
+import Render from '@/components/Render'
 
 export const dynamic = 'force-dynamic'
-
-interface PaginationTypes {
-  currentPage: number
-  totalPages: number
-  setPage: Function
-}
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true)
   const [ads, setAds] = useState([])
 
   const [page, setPage] = useState(1)
+  const [limit, setLimit] = useState(20)
   const [totalPages, setTotalPages] = useState(0)
 
   const fetchData = useCallback(async () => {
     try {
       setIsLoading(true)
-      // const resp = await fetch(`/api?page=${page}`)
-      const resp = await fetch(`/api`)
-      console.log('resp::', resp)
+      const resp = await fetch(`/api?page=${page}&limit=${limit}`)
       const { rows, totalPages } = await resp.json()
-      console.log('rows::', rows)
       setAds(rows)
       setTotalPages(totalPages)
     } catch (e) {
@@ -39,7 +35,7 @@ export default function Home() {
     } finally {
       setIsLoading(false)
     }
-  }, [page])
+  }, [page, limit])
 
   useEffect(() => {
     AOS.init({ duration: 1100 })
@@ -49,96 +45,28 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col p-24">
       <HomeHero />
-      {/* Ads listing */}
       <section className="my-12 w-full">
-        {isLoading && <LoadingSkeleton />}
-        {!isLoading && ads?.length > 0 && (
+        <Render when={isLoading}>
+          <LoadingSkeleton />
+        </Render>
+        <Render when={!isLoading && ads?.length > 0}>
           <section className="grid grid-flow-row gap-8">
             <FeaturedProperties properties={ads.slice(0, 2)} />
             <PropertyListing properties={ads} />
-            <Pagination
-              currentPage={page}
-              totalPages={totalPages}
-              setPage={setPage}
-            />
+            <div className="flex justify-between items-center mt-12">
+              <Pagination
+                currentPage={page}
+                totalPages={totalPages}
+                setPage={setPage}
+              />
+              <AdsPerPage limit={limit} setLimit={setLimit} />
+            </div>
           </section>
-        )}
-        {!isLoading && !ads?.length && (
+        </Render>
+        <Render when={!isLoading && !ads?.length}>
           <p className="italic text-black/80">No data found</p>
-        )}
+        </Render>
       </section>
     </main>
-  )
-}
-
-function HomeHero() {
-  return (
-    <section>
-      <h1 className="text-5xl font-bold">
-        Real Estate in Prague & Czech Republic
-      </h1>
-      <h2 className="text-md">
-        Thousands of quality properties for Rent and Sale.
-      </h2>
-    </section>
-  )
-}
-
-function Pagination({ currentPage, totalPages, setPage }: PaginationTypes) {
-  const isClient = typeof window !== 'undefined'
-  const pages = Array.from({ length: totalPages }, (_, i) => i + 1)
-
-  function scrollToTop() {
-    if (isClient)
-      window.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: 'smooth'
-      })
-  }
-
-  function handlePageChange(page: number) {
-    scrollToTop()
-    setPage(page)
-  }
-
-  return (
-    <section data-aos="fade-up" className="flex flex-wrap gap-3 mt-12">
-      {pages.map(pageNum => {
-        const isActive = currentPage === pageNum
-        return (
-          <button
-            key={pageNum}
-            onClick={() => handlePageChange(pageNum)}
-            className={classNames({
-              'bg-gray-200': !isActive,
-              'bg-blue-500 text-white': isActive,
-              'px-4 py-2 rounded-md cursor-pointer text-sm hover:bg-opacity-50':
-                true
-            })}>
-            {pageNum}
-          </button>
-        )
-      })}
-    </section>
-  )
-}
-
-function LoadingSkeleton() {
-  const cardClasses =
-    'bg-gray-200 animate-pulse rounded-xl bg-gray-200 animate-pulse rounded-xl'
-  return (
-    <section className="grid grid-flow-row gap-8">
-      <div className="grid grid-cols-2 gap-8">
-        {[...Array(2)].map((_, i) => (
-          <div key={i} className={`h-96 w-full ${cardClasses}`} />
-        ))}
-      </div>
-      <div className="grid grid-cols-4 gap-x-8 gap-y-14">
-        {[...Array(10)].map((_, i) => (
-          <div key={i} className={`w-full h-72 ${cardClasses}`} />
-        ))}
-      </div>
-    </section>
   )
 }

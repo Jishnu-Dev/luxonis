@@ -1,9 +1,9 @@
 import './globals.css'
 
-import { HeartIcon, UserIcon } from 'lucide-react'
-
+import Footer from '@/components/layout/Footer'
 import { Inter } from 'next/font/google'
 import type { Metadata } from 'next'
+import NavBar from '@/components/layout/NavBar'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -25,27 +25,5 @@ export default function RootLayout({
         <Footer />
       </body>
     </html>
-  )
-}
-
-function NavBar() {
-  return (
-    <nav className="w-full bg-white border-b page-container flex justify-between items-center py-5">
-      <h1 className="text-2xl font-black text-blue-700">LUXO PROPERTIES</h1>
-      <button className="p-2 rounded-lg hover:bg-gray-50 border">
-        <UserIcon className="text-black/50" />
-      </button>
-    </nav>
-  )
-}
-
-function Footer() {
-  return (
-    <footer className="w-full border-t flex justify-between text-base text-black/50 page-container py-6">
-      <p className="text-sm flex gap-2">
-        Made with <HeartIcon className="text-red-500" /> by{' '}
-        <span className="font-mono">Jishnu Raj</span>
-      </p>
-    </footer>
   )
 }
