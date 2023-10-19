@@ -43,7 +43,7 @@ export default function Home() {
   }, [fetchData])
 
   return (
-    <main className="flex min-h-screen flex-col p-24">
+    <main className="flex min-h-screen flex-col p-10 md:p-24">
       <HomeHero />
       <section className="my-12 w-full">
         <Render when={isLoading}>
@@ -53,7 +53,7 @@ export default function Home() {
           <section className="grid grid-flow-row gap-8">
             <FeaturedProperties properties={ads?.slice(0, 2)} />
             <PropertyListing properties={ads} />
-            <div className="w-full flex justify-between items-center mt-12">
+            <div className="w-full flex flex-col lg:flex-row gap-6 justify-between items-start lg:items-center mt-12">
               <Pagination
                 currentPage={page}
                 totalPages={totalPages}

@@ -9,7 +9,7 @@ export default function LoadingSkeleton() {
         ))}
       </div>
       <div className="grid grid-cols-4 gap-x-8 gap-y-14">
-        {[...Array(10)].map((_, i) => (
+        {[...Array(30)].map((_, i) => (
           <div key={i} className={`w-full h-72 ${cardClasses}`} />
         ))}
       </div>

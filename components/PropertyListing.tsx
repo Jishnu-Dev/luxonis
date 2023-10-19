@@ -30,7 +30,7 @@ export default function PropertyListing({ properties }: PropertiesProps) {
         className={classNames({
           'xl:grid-cols-4': is4xGrid,
           'xl:grid-cols-3': !is4xGrid,
-          'grid grid-cols-2 lg:grid-cols-3 gap-x-4 md:gap-x-8 gap-y-7 md:gap-y-14':
+          'grid grid-cols-1 lg:grid-cols-3 gap-x-4 md:gap-x-8 gap-y-7 md:gap-y-14':
             true
         })}>
         {properties.map(

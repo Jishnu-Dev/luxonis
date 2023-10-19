@@ -34,7 +34,7 @@ export default function Pagination({
     <div className="max-w-screen-md">
       <section
         data-aos="fade-up"
-        className="md:max-w-[80%] overflow-x-scroll flex gap-3 hide-scrollbar hide-scrollbar-webkit">
+        className="md:max-w-[80%] overflow-x-scroll flex flex-wrap lg:flex-nowrap gap-3 hide-scrollbar hide-scrollbar-webkit">
         {pages.map(pageNum => {
           const isActive = currentPage === pageNum
           return (
