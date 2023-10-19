@@ -51,9 +51,9 @@ export default function Home() {
         </Render>
         <Render when={!isLoading && ads?.length > 0}>
           <section className="grid grid-flow-row gap-8">
-            <FeaturedProperties properties={ads.slice(0, 2)} />
+            <FeaturedProperties properties={ads?.slice(0, 2)} />
             <PropertyListing properties={ads} />
-            <div className="flex justify-between items-center mt-12">
+            <div className="w-full flex justify-between items-center mt-12">
               <Pagination
                 currentPage={page}
                 totalPages={totalPages}

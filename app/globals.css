@@ -24,4 +24,17 @@
   .page-container {
     @apply px-24;
   }
+  .hide-scrollbar-webkit::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+  .hide-scrollbar-webkit::-webkit-scrollbar-thumb {
+    background: transparent;
+  }
+  .hide-scrollbar-webkit::-webkit-scrollbar-thumb:hover {
+    background: transparent;
+  }
+  .hide-scrollbar {
+    scrollbar-width: none;
+  }
 }

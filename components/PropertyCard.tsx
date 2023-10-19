@@ -22,8 +22,8 @@ export default function PropertyCard({
 
   return (
     <article
-      className="bg-white grid grid-flow-row gap-4 group"
-      data-aos="fade-up">
+      data-aos="fade-up"
+      className="w-full grid grid-flow-row gap-4 group">
       <figure
         className={classNames({
           'h-96': featured,

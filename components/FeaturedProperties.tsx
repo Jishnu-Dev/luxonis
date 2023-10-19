@@ -5,7 +5,6 @@ interface PropertyCardProps {
   title: string
   location: string
   image_url: string
-  featured: boolean
 }
 
 interface FeaturedPropertiesProps {
@@ -20,8 +19,8 @@ export default function FeaturedProperties({
     <section>
       <SectionTitle title="Featured Properties" />
       <section
-        className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8"
-        data-aos="fade-up">
+        // data-aos="fade-up"
+        className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8">
         {properties.map(
           ({ title, location, image_url }: PropertyCardProps, index) => (
             <PropertyCard

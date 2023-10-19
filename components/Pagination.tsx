@@ -31,25 +31,27 @@ export default function Pagination({
   }
 
   return (
-    <section
-      data-aos="fade-up"
-      className="w-1/2 overflow-x-scroll flex flex-wrap gap-3">
-      {pages.map(pageNum => {
-        const isActive = currentPage === pageNum
-        return (
-          <button
-            key={pageNum}
-            onClick={() => handlePageChange(pageNum)}
-            className={classNames({
-              'bg-gray-200': !isActive,
-              'bg-blue-500 text-white': isActive,
-              'px-4 py-2 rounded-md cursor-pointer text-sm hover:bg-opacity-50':
-                true
-            })}>
-            {pageNum}
-          </button>
-        )
-      })}
-    </section>
+    <div className="max-w-screen-md">
+      <section
+        data-aos="fade-up"
+        className="md:max-w-[80%] overflow-x-scroll flex gap-3 hide-scrollbar hide-scrollbar-webkit">
+        {pages.map(pageNum => {
+          const isActive = currentPage === pageNum
+          return (
+            <button
+              key={pageNum}
+              onClick={() => handlePageChange(pageNum)}
+              className={classNames({
+                'bg-gray-200': !isActive,
+                'bg-blue-500 text-white': isActive,
+                'px-4 py-2 rounded-md cursor-pointer text-sm hover:bg-opacity-50':
+                  true
+              })}>
+              {pageNum}
+            </button>
+          )
+        })}
+      </section>
+    </div>
   )
 }
