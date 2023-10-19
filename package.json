@@ -16,6 +16,7 @@
     "cheerio": "^1.0.0-rc.12",
     "classnames": "^2.3.2",
     "dockerize": "^0.1.0",
+    "framer-motion": "^10.16.4",
     "lucide-react": "^0.287.0",
     "next": "13.5.4",
     "pg": "^8.11.3",
