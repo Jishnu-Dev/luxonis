@@ -4,11 +4,11 @@ const fs = require('fs')
 console.info('Info:: ENTERED SCRIPT...')
 
 const pool = new Pool({
-  user: 'postgres',
   host: 'db',
+  port: 5432,
+  user: 'postgres',
   database: 'luxo_task_db',
-  password: 'docker',
-  port: 5432
+  password: 'docker'
 })
 
 async function createTables() {

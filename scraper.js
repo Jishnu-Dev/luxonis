@@ -27,7 +27,7 @@ const getSiteData = async page => {
       property.location = $(prop).find('h3').text()
 
       // Find image URLs
-      property.image = $(prop).find('a > img').attr('src')
+      property.image_url = $(prop).find('a > img').attr('src')
       if (property['title'] !== '') properties.push(property)
     })
 

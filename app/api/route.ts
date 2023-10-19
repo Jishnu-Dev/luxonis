@@ -3,11 +3,11 @@ import { type NextRequest } from 'next/server'
 import { Pool } from 'pg'
 
 const pool = new Pool({
+  host: 'localhost',
+  port: 5432,
   user: 'postgres',
-  host: 'db',
   database: 'luxo_task_db',
-  password: 'docker',
-  port: 5432
+  password: 'docker'
 })
 
 export async function GET(request: NextRequest) {

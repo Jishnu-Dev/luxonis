@@ -1,4 +1,9 @@
 version: '3'
+
+networks:
+  mynetwork:
+    driver: bridge
+
 services:
   # PostgreSQL Database Service
   db:
@@ -7,7 +12,6 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: docker
       POSTGRES_DB: luxo_task_db
-      NEXT_TELEMETRY_DISABLED: 1
     ports:
       - '5432:5432' # Mapping host port 5432 to container port 5432
     healthcheck:
@@ -17,6 +21,7 @@ services:
       retries: 5
     networks:
       - mynetwork
+
   # Next.js Application Service
   web:
     build:
@@ -33,9 +38,5 @@ services:
       DB_USER: postgres
       DB_PASSWORD: docker
       DB_NAME: luxo_task_db
-      NEXT_TELEMETRY_DISABLED: 1
     networks:
       - mynetwork
-
-networks:
-  mynetwork:
